@@ -31,11 +31,11 @@ let baseMaps = {
 // streets 
 streets.addTo(map);
 
-// Accessing the airport GeoJSON URL
-let airportData = "https://raw.githubusercontent.com/pipecedillo/Mapping_Earthquakes/main/majorAirports.json";
+// Accessing the Toronto airline routes GeoJSON URL.
+let torontoData = "https://raw.githubusercontent.com/<GitHub_name>/Mapping_Earthquakes/main/torontoRoutes.json";
 
 // Grabbing our GeoJSON data.
-d3.json(airportData).then(function(data) {
+d3.json(torontoData).then(function(data) {
   console.log(data);
 // Creating a GeoJSON layer with the retrieved data.
 L.geoJSON(data).addTo(map);
